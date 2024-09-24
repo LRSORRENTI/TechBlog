@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luke Sorrenti's Tech Blog</title>
+
+    <!--
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="../assets/css/style.min.css" />
+    <link rel="stylesheet" href="../assets/css/blog.css">
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="light-theme">
+    <!--
+    - #HEADER
+  -->
+
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="../index.html">
+            <img
+              src="../assets/images/logo-light.svg"
+              alt="Devblog's logo"
+              width="150"
+              height="40"
+              class="logo-light"
+            />
+            <img
+              src="../assets/images/logo-dark.svg"
+              alt="Devblog's logo"
+              width="150"
+              height="40"
+              class="logo-dark"
+            />
+          </a>
+
+          <div class="btn-group">
+            <!-- <button class="theme-btn theme-btn-mobile light">
+              <ion-icon name="moon" class="moon"></ion-icon>
+              <ion-icon name="sunny" class="sun"></ion-icon>
+            </button> -->
+
+            <button class="nav-menu-btn">
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+
+          <div class="flex-wrapper">
+            <ul class="desktop-nav">
+              <li>
+                <a href="../index.html" class="nav-link">Home</a>
+              </li>
+
+              <!-- <li>
+                <a href="#" class="nav-link">About Me</a>
+              </li>
+
+              <li>
+                <a href="#" class="nav-link">Contact</a>
+              </li> -->
+            </ul>
+
+            <!-- <button class="theme-btn theme-btn-desktop light">
+              <ion-icon name="moon" class="moon"></ion-icon>
+              <ion-icon name="sunny" class="sun"></ion-icon>
+            </button> -->
+          </div>
+
+          <div class="mobile-nav">
+            <button class="nav-close-btn">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="wrapper">
+              <p class="h3 nav-title">Main Menu</p>
+
+              <ul>
+                <li class="nav-item">
+                  <a href="../index.html" class="nav-link">Home</a>
+                </li>
+
+                <!-- <li class="nav-item">
+                  <a href="#" class="nav-link">About Me</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Contact</a>
+                </li> -->
+              </ul>
+            </div>
+
+            <div>
+              <p class="h3 nav-title">Topics</p>
+
+              <ul>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Database</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Accessibility</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Web Performance</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!--
+      - #HERO SECTION
+    -->
+<!-- 
+      <div class="hero">
+        <div class="container">
+          <div class="left">
+            <h1 class="h1">
+              Hi, I'm <b>Julia&nbsp;Walker</b>. <br />Web Developer
+            </h1>
+
+            <p class="h3">
+              Specialized in <abbr title="Accessibility">a11y</abbr>
+              and Core Web Vitals
+            </p>
+
+            <div class="btn-group">
+              <a href="#" class="btn btn-primary">Contact Me</a>
+              <a href="#" class="btn btn-secondary">About Me</a>
+            </div>
+          </div>
+
+          <div class="right">
+            <div class="pattern-bg"></div>
+            <div class="img-box">
+              <img
+                src="../assets/images/hero.png"
+                alt="Julia Walker"
+                class="hero-img"
+              />
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <header>
+        <h1>Harnessing the Power of the Web Speech API: An In-Depth Look at SpeechSynthesis</h1>
+      </header>
+    
+      <main>
+        <section>
+          <p>
+            The Web Speech API brings voice capabilities to web applications, enabling developers to incorporate speech recognition and synthesis into their projects. In this blog post, we'll explore the <strong>SpeechSynthesis</strong> part of the API, understand how it works, and discuss its potential use cases, including applications in speech therapy and assistive technologies. Plus, we'll share a fun fact about speech synthesis technology!
+          </p>
+        </section>
+    
+        <section>
+          <h2>What is the SpeechSynthesis API?</h2>
+          <p>
+            The SpeechSynthesis API is part of the Web Speech API, which allows web applications to handle speech recognition and synthesis. Specifically, the SpeechSynthesis API enables your web app to convert text into spoken words, providing a voice interface to users.
+          </p>
+        </section>
+    
+        <section>
+          <h2>How Does It Work?</h2>
+          <p>
+            At its core, the SpeechSynthesis API uses the browser's built-in speech synthesis capabilities to vocalize text strings. Here's a step-by-step breakdown of how it works:
+          </p>
+          <ol>
+            <li>
+              <strong>Create a SpeechSynthesisUtterance Instance:</strong> This object contains the text you want to be spoken and various properties like language, pitch, and rate.
+            </li>
+            <li>
+              <strong>Configure the Utterance:</strong> You can set properties such as <code>lang</code> for language, <code>pitch</code>, <code>rate</code>, and <code>voice</code> to customize the speech output.
+            </li>
+            <li>
+              <strong>Speak the Utterance:</strong> Use the <code>speechSynthesis.speak()</code> method to enqueue the utterance for speaking.
+            </li>
+          </ol>
+          <h3>Basic Example</h3>
+          <pre><code class="language-javascript">// Create a new utterance instance
+    let utterance = new SpeechSynthesisUtterance('Hello, world!');
+    
+    // Set properties
+    utterance.lang = 'en-US';
+    utterance.pitch = 1;
+    utterance.rate = 1;
+    
+    // Speak the utterance
+    window.speechSynthesis.speak(utterance);</code></pre>
+        </section>
+    
+        <section>
+          <h2>Use Cases</h2>
+          <h3>1. Assistive Technologies</h3>
+          <p>
+            One of the most significant applications of the SpeechSynthesis API is in assistive technologies for individuals with visual impairments or reading difficulties. By converting text content into speech, web applications become more accessible.
+          </p>
+          <p><em>Example:</em> Screen readers that vocalize webpage content, helping visually impaired users navigate the internet.</p>
+    
+          <h3>2. Speech Therapy Applications</h3>
+          <p>
+            Speech therapists can leverage the SpeechSynthesis API to create interactive tools that assist in language learning and pronunciation practice.
+          </p>
+          <p><em>Example:</em> An app that reads words or sentences aloud, allowing users to repeat and improve their pronunciation.</p>
+    
+          <h3>3. Language Learning Tools</h3>
+          <p>
+            Language learners can benefit from hearing the correct pronunciation of words and phrases in different languages.
+          </p>
+          <p><em>Example:</em> A language app that vocalizes vocabulary words in the target language, aiding in auditory learning.</p>
+    
+          <h3>4. Interactive Storytelling</h3>
+          <p>
+            Developers can create immersive storytelling experiences by adding narration to text content.
+          </p>
+          <p><em>Example:</em> An interactive eBook that reads stories aloud to children, enhancing engagement.</p>
+    
+          <h3>5. User Notifications</h3>
+          <p>
+            Web applications can provide verbal alerts or updates, which can be especially useful when the user's attention is needed elsewhere.
+          </p>
+          <p><em>Example:</em> A productivity app that announces reminders or notifications verbally.</p>
+        </section>
+    
+        <section>
+          <h2>Getting Started with SpeechSynthesis API</h2>
+          <h3>Checking for Browser Support</h3>
+          <p>
+            Before implementing the API, it's essential to check if the user's browser supports it.
+          </p>
+          <pre><code class="language-javascript">if ('speechSynthesis' in window) {
+      // Speech Synthesis supported 🎉
+    } else {
+      // Speech Synthesis not supported 😢
+    }</code></pre>
+    
+          <h3>Selecting a Voice</h3>
+          <p>
+            You can choose from the list of voices available in the user's browser.
+          </p>
+          <pre><code class="language-javascript">let voices = speechSynthesis.getVoices();
+    utterance.voice = voices.find(voice => voice.name === 'Google US English');</code></pre>
+    
+          <h3>Handling Events</h3>
+          <p>
+            The <code>SpeechSynthesisUtterance</code> object provides several events like <code>start</code>, <code>end</code>, <code>error</code>, <code>pause</code>, and <code>resume</code> to manage the speech process.
+          </p>
+          <pre><code class="language-javascript">utterance.onstart = () => {
+      console.log('Speech has started');
+    };
+    
+    utterance.onend = () => {
+      console.log('Speech has ended');
+    };</code></pre>
+        </section>
+    
+        <section>
+          <h2>Fun Fact</h2>
+          <p>
+            Did you know that one of the earliest speech synthesis systems was created in the 1930s? The <strong>VODER</strong> (Voice Operating Demonstrator) was introduced at the 1939 New York World's Fair and was one of the first devices capable of generating continuous human speech electronically!
+          </p>
+        </section>
+    
+        <section>
+          <h2>Conclusion</h2>
+          <p>
+            The SpeechSynthesis API opens up a world of possibilities for making web applications more interactive and accessible. Whether you're developing tools for assistive technology, educational apps, or just adding a unique feature to your site, speech synthesis can enhance user experience in meaningful ways.
+          </p>
+          <p>
+            <strong>Ready to add a voice to your web app?</strong> Explore the SpeechSynthesis API and start creating more engaging and accessible applications today!
+          </p>
+        </section>
+      </main>
+    
+  
+
+
+    <!--
+    - #FOOTER
+  -->
+
+    <footer>
+      <!-- <div class="container">
+        <div class="wrapper">
+          <a href="#" class="footer-logo">
+            <img
+              src="./assets/images/logo-light.svg"
+              alt="DevBlog's Logo"
+              width="150"
+              height="40"
+              class="logo-light"
+            />
+            <img
+              src="./assets/images/logo-dark.svg"
+              alt="DevBlog's Logo"
+              width="150"
+              height="40"
+              class="logo-dark"
+            />
+          </a>
+
+          <p class="footer-text">
+            Learn about Web accessibility, Web performance, and Database
+            management.
+          </p>
+        </div>
+
+        <div class="wrapper">
+          <p class="footer-title">Quick Links</p>
+
+          <ul>
+            <li>
+              <a href="#" class="footer-link">Advertise with us</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">About Us</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="wrapper">
+          <p class="footer-title">Legal Stuff</p>
+
+          <ul>
+            <li>
+              <a href="#" class="footer-link">Privacy Notice</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Cookie Policy</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Terms Of Use</a>
+            </li>
+          </ul>
+        </div>
+      </div> -->
+
+      <p class="copyright">
+         <a href="../index.html">Home</a>
+      </p>
+    </footer>
+
+    <!--
+    - custom js link
+  -->
+    <script src="../assets/js/script.min.js"></script>
+
+    <!--
+    - ionicon link
+  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-javascript.min.js"></script> 
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

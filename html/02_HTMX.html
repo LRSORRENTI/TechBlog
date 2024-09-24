@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luke Sorrenti's Tech Blog</title>
+
+    <!--
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="../assets/css/style.min.css" />
+    <link rel="stylesheet" href="../assets/css/blog.css" />
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="light-theme">
+    <!--
+    - #HEADER
+  -->
+
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="../index.html">
+            <img
+              src="../assets/images/logo-light.svg"
+              alt="Devblog's logo"
+              width="150"
+              height="40"
+              class="logo-light"
+            />
+            <img
+              src="../assets/images/logo-dark.svg"
+              alt="Devblog's logo"
+              width="150"
+              height="40"
+              class="logo-dark"
+            />
+          </a>
+
+          <div class="btn-group">
+            <button class="nav-menu-btn">
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+
+          <div class="flex-wrapper">
+            <ul class="desktop-nav">
+              <li>
+                <a href="../index.html" class="nav-link">Home</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mobile-nav">
+            <button class="nav-close-btn">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="wrapper">
+              <p class="h3 nav-title">Main Menu</p>
+
+              <ul>
+                <li class="nav-item">
+                  <a href="../index.html" class="nav-link">Home</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="h3 nav-title">Topics</p>
+
+              <ul>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Database</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Accessibility</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Web Performance</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <header>
+        <h1>
+          Unlocking the Power of HTMX: Bringing Interactivity Back to HTML
+        </h1>
+      </header>
+
+      <main>
+        <section>
+          <p>
+            HTMX is a lightweight JavaScript library that allows you to access
+            modern browser features directly from HTML, simplifying the
+            development of interactive web applications. In this blog post,
+            we'll explore what HTMX is, how it works, and discuss its potential
+            use cases, including enhancing user experience without the overhead
+            of heavy JavaScript frameworks. Plus, we'll share a fun fact about
+            the evolution of web development!
+          </p>
+        </section>
+
+        <section>
+          <h2>What is HTMX?</h2>
+          <p>
+            HTMX stands for "Hypertext Markup eXtended" and is an open-source
+            library that enables you to add AJAX, CSS Transitions, WebSockets,
+            and Server-Sent Events directly in your HTML using attributes. It
+            brings a declarative approach to building dynamic web applications,
+            allowing developers to enhance user interfaces without writing
+            extensive JavaScript code.
+          </p>
+        </section>
+
+        <section>
+          <h2>How Does It Work?</h2>
+          <p>
+            HTMX works by extending HTML with custom attributes that define the
+            behavior of elements. Here's a step-by-step breakdown of how it
+            operates:
+          </p>
+          <ol>
+            <li>
+              <strong>Add HTMX Attributes to HTML Elements:</strong> Use
+              attributes like <code>hx-get</code>, <code>hx-post</code>,
+              <code>hx-swap</code>, and others to specify HTTP methods and how
+              responses should be handled.
+            </li>
+            <li>
+              <strong>Define the Interaction:</strong> Configure how elements
+              should react to user events such as clicks, form submissions, or
+              page load.
+            </li>
+            <li>
+              <strong>HTMX Handles the Rest:</strong> HTMX intercepts the
+              specified events, sends AJAX requests, and swaps out HTML content
+              based on the response, all without a full page reload.
+            </li>
+          </ol>
+          <h3>Basic Example</h3>
+          <p>
+            Here's a simple example of how to use HTMX to load content into a
+            page:
+          </p>
+          <pre><code class="language-html">&lt;button hx-get="/content" hx-target="#result"&gt;Load Content&lt;/button&gt;
+&lt;div id="result"&gt;&lt;/div&gt;</code></pre>
+          <p>
+            In this example, when the button is clicked, HTMX sends a GET
+            request to <code>/content</code> and loads the response into the
+            <code>&lt;div&gt;</code> with the ID <code>result</code>.
+          </p>
+        </section>
+
+        <section>
+          <h2>Use Cases</h2>
+          <h3>1. Simplifying AJAX Calls</h3>
+          <p>
+            HTMX allows you to perform AJAX requests without writing JavaScript,
+            making it easier to update parts of the page dynamically.
+          </p>
+          <p>
+            <em>Example:</em> Loading more articles on a blog page without
+            reloading the entire page.
+          </p>
+
+          <h3>2. Enhancing Forms</h3>
+          <p>
+            You can use HTMX to improve form interactions, such as inline
+            validation or dynamic field updates.
+          </p>
+          <p>
+            <em>Example:</em> Automatically fetching and displaying user
+            information after entering a username.
+          </p>
+
+          <h3>3. Real-Time Updates</h3>
+          <p>
+            HTMX supports Server-Sent Events and WebSockets, enabling real-time
+            content updates.
+          </p>
+          <p>
+            <em>Example:</em> A live chat application where messages appear
+            instantly without page refreshes.
+          </p>
+
+          <h3>4. Progressive Enhancement</h3>
+          <p>
+            HTMX can enhance existing HTML pages by adding interactivity, making
+            it ideal for progressively upgrading applications.
+          </p>
+          <p>
+            <em>Example:</em> Adding dynamic sorting and filtering to a product
+            list on an e-commerce site.
+          </p>
+
+          <h3>5. Reducing JavaScript Complexity</h3>
+          <p>
+            By handling interactivity through HTML attributes, HTMX reduces the
+            need for complex JavaScript code and frameworks.
+          </p>
+          <p>
+            <em>Example:</em> Building interactive components without relying on
+            heavy libraries like React or Angular.
+          </p>
+        </section>
+
+        <section>
+          <h2>Getting Started with HTMX</h2>
+          <h3>Including HTMX in Your Project</h3>
+          <p>To start using HTMX, simply include it in your HTML file:</p>
+          <pre><code class="language-html">&lt;script src="https://unpkg.com/htmx.org@1.9.2"&gt;&lt;/script&gt;</code></pre>
+          <h3>Using HTMX Attributes</h3>
+          <p>
+            HTMX provides a set of attributes to control behavior. Some of the
+            most commonly used are:
+          </p>
+          <ul>
+            <li>
+              <code>hx-get</code>, <code>hx-post</code>, <code>hx-put</code>,
+              <code>hx-delete</code>: Define the HTTP method and endpoint.
+            </li>
+            <li>
+              <code>hx-target</code>: Specifies the element to update with the
+              response.
+            </li>
+            <li>
+              <code>hx-trigger</code>: Determines the event that triggers the
+              request.
+            </li>
+            <li>
+              <code>hx-swap</code>: Controls how the response content is swapped
+              into the DOM.
+            </li>
+          </ul>
+          <h3>Handling Responses</h3>
+          <p>
+            The server should return HTML snippets that HTMX will insert into
+            the DOM based on the defined <code>hx-target</code> and
+            <code>hx-swap</code> attributes.
+          </p>
+          <pre><code class="language-html">&lt;div hx-get="/news" hx-trigger="load" hx-target="#latest-news"&gt;&lt;/div&gt;
+&lt;div id="latest-news"&gt;&lt;/div&gt;</code></pre>
+        </section>
+
+        <section>
+          <h2>Fun Fact</h2>
+          <p>
+            Did you know that before the rise of heavy JavaScript frameworks,
+            web interactivity was often achieved with minimal scripts and clever
+            use of HTML and CSS? HTMX brings back this simplicity by empowering
+            HTML to handle interactivity without the bloat!
+          </p>
+        </section>
+
+        <section>
+          <h2>Conclusion</h2>
+          <p>
+            HTMX offers a refreshing approach to building interactive web
+            applications by leveraging the power of HTML. It simplifies
+            development, enhances performance, and reduces the need for complex
+            JavaScript code. Whether you're looking to improve user experience
+            or streamline your development process, HTMX is a valuable tool to
+            consider.
+          </p>
+          <p>
+            <strong>Ready to enhance your web applications with HTMX?</strong>
+            Explore the documentation and start simplifying your codebase today!
+          </p>
+        </section>
+      </main>
+    </main>
+
+    <!--
+    - #FOOTER
+  -->
+
+    <footer>
+      <p class="copyright">
+        <a href="../index.html">Home</a>
+      </p>
+    </footer>
+
+    <!--
+    - custom js link
+  -->
+    <script src="../assets/js/script.min.js"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-javascript.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
