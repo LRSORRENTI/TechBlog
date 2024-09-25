@@ -1,6 +1,7 @@
 /* General Styles */
 
 header h1 {
+  padding-left: 17px;
   margin: 0;
   font-size: 2em;
 }
