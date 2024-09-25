@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luke Sorrenti's Tech Blog</title>
+
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/style.min.css" />
+    <link rel="stylesheet" href="../assets/css/blog.css" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  </head>
+
+  <body class="light-theme">
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="../index.html">
+            <img src="../assets/images/logo-light.svg" alt="Devblog's logo" width="150" height="40" class="logo-light" />
+            <img src="../assets/images/logo-dark.svg" alt="Devblog's logo" width="150" height="40" class="logo-dark" />
+          </a>
+
+          <div class="btn-group">
+            <button class="nav-menu-btn">
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+
+          <div class="flex-wrapper">
+            <ul class="desktop-nav">
+              <li><a href="../index.html" class="nav-link">Home</a></li>
+            </ul>
+          </div>
+
+          <div class="mobile-nav">
+            <button class="nav-close-btn">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="wrapper">
+              <p class="h3 nav-title">Main Menu</p>
+
+              <ul>
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="h3 nav-title">Topics</p>
+
+              <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Database</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Accessibility</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Web Performance</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <header>
+        <h1>Exploring SQLite: The Lightweight Database Solution for Developers</h1>
+      </header>
+
+      <main>
+        <section>
+          <p>
+            When it comes to lightweight and fast databases, SQLite is a top contender. Whether you're building a small web app or creating a mobile application, SQLite offers a self-contained, serverless solution that is easy to set up and use. In this blog post, we'll explore what SQLite is, how it works, and why it's one of the most widely used database engines today. We'll also dive into practical examples that show its versatility and power.
+          </p>
+        </section>
+
+        <section>
+          <h2>What is SQLite?</h2>
+          <p>
+            SQLite is a C-based relational database management system (RDBMS) known for being embedded into applications without the need for a dedicated database server. Unlike more complex systems such as MySQL or PostgreSQL, SQLite stores the entire database in a single file on disk, making it highly portable and ideal for smaller-scale projects.
+          </p>
+        </section>
+
+        <section>
+          <h2>How Does SQLite Work?</h2>
+          <p>
+            SQLite operates by creating a single database file that stores all the tables, schemas, indexes, and data. Here's a step-by-step breakdown of how it works:
+          </p>
+          <ol>
+            <li>
+              <strong>Create a Database File:</strong> SQLite creates a single .sqlite or .db file where all the data resides.
+            </li>
+            <li>
+              <strong>Interact with SQL Commands:</strong> Like most RDBMS, SQLite uses SQL (Structured Query Language) for querying and updating the data.
+            </li>
+            <li>
+              <strong>Minimal Setup:</strong> With no server to configure or run, SQLite can be embedded directly into your app, and accessing the database is done with simple file I/O operations.
+            </li>
+          </ol>
+          <h3>Basic Example</h3>
+          <p>
+            Here's a quick example of creating and inserting data into a SQLite database:
+          </p>
+          <pre><code class="language-sql">CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT, age INTEGER);
+
+INSERT INTO users (name, age) VALUES ('Alice', 30), ('Bob', 25);</code></pre>
+          <p>
+            This code creates a table called <code>users</code> and adds two entries for 'Alice' and 'Bob'. The entire database, including this table, is stored within a single file on your system.
+          </p>
+        </section>
+
+        <section>
+          <h2>Use Cases</h2>
+          <h3>1. Mobile Applications</h3>
+          <p>
+            SQLite is widely used in mobile development, particularly in Android and iOS apps, due to its simplicity and low resource consumption.
+          </p>
+          <p>
+            <em>Example:</em> Storing user data, settings, or app state on a mobile device.
+          </p>
+
+          <h3>2. Prototyping and Small Projects</h3>
+          <p>
+            For quick prototypes, small-scale apps, or even testing out SQL queries, SQLite provides a low-overhead way to manage a database without needing a full server.
+          </p>
+          <p>
+            <em>Example:</em> A hobby project where a lightweight database solution is sufficient.
+          </p>
+
+          <h3>3. Local Caching</h3>
+          <p>
+            SQLite can act as a local cache for data that is frequently accessed but changes infrequently. This can reduce the load on more complex databases by offloading read operations.
+          </p>
+          <p>
+            <em>Example:</em> A local copy of server data for offline use.
+          </p>
+        </section>
+
+        <section>
+          <h2>Getting Started with SQLite</h2>
+          <h3>Installing SQLite</h3>
+          <p>Getting started with SQLite is simple. Most operating systems come with SQLite pre-installed. If not, you can download it from the official website.</p>
+          <h3>Using SQLite with Python</h3>
+          <p>
+            One of the easiest ways to interact with SQLite is through Python. Python’s standard library includes a built-in module for SQLite. Here’s a simple example:
+          </p>
+          <pre><code class="language-python">import sqlite3
+
+# Connect to the database (or create it)
+conn = sqlite3.connect('example.db')
+
+# Create a cursor
+cursor = conn.cursor()
+
+# Execute SQL commands
+cursor.execute('''CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)''')
+cursor.execute("INSERT INTO users (name, age) VALUES ('Charlie', 22)")
+
+# Commit and close
+conn.commit()
+conn.close()</code></pre>
+          <p>
+            This code creates a new SQLite database (or opens it if it already exists), adds a <code>users</code> table, inserts some data, and then commits and closes the connection.
+          </p>
+        </section>
+
+        <section>
+          <h2>Fun Fact</h2>
+          <p>
+            Did you know that SQLite is one of the most widely deployed databases in the world? It's used in everything from web browsers and mobile apps to operating systems and gaming consoles!
+          </p>
+        </section>
+
+        <section>
+          <h2>Conclusion</h2>
+          <p>
+            SQLite is a powerful, lightweight database solution that’s easy to use and widely adopted across many platforms. Whether you’re building a mobile app, prototyping a new web application, or just need a simple, embedded database, SQLite provides the functionality and ease of use you need.
+          </p>
+          <p>
+            <strong>Ready to get started with SQLite?</strong> Download the SQLite command-line tool or integrate it with your favorite programming language, and start building efficient, serverless databases today!
+          </p>
+        </section>
+      </main>
+    </main>
+
+    <footer>
+      <p class="copyright">
+        <a href="../index.html">Home</a>
+      </p>
+    </footer>
+
+    <script src="../assets/js/script.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-sql.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons

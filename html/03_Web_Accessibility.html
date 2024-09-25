@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luke Sorrenti's Tech Blog</title>
+
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../assets/css/style.min.css" />
+    <link rel="stylesheet" href="../assets/css/blog.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="light-theme">
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="../index.html">
+            <img
+              src="../assets/images/logo-light.svg"
+              alt="Devblog's logo"
+              width="150"
+              height="40"
+              class="logo-light"
+            />
+            <img
+              src="../assets/images/logo-dark.svg"
+              alt="Devblog's logo"
+              width="150"
+              height="40"
+              class="logo-dark"
+            />
+          </a>
+
+          <div class="btn-group">
+            <button class="nav-menu-btn">
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+
+          <div class="flex-wrapper">
+            <ul class="desktop-nav">
+              <li><a href="../index.html" class="nav-link">Home</a></li>
+            </ul>
+          </div>
+
+          <div class="mobile-nav">
+            <button class="nav-close-btn">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="wrapper">
+              <p class="h3 nav-title">Main Menu</p>
+
+              <ul>
+                <li class="nav-item">
+                  <a href="../index.html" class="nav-link">Home</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="h3 nav-title">Topics</p>
+
+              <ul>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Database</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Accessibility</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Web Performance</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <header>
+        <h1>Enhancing Web Accessibility: Exploring Accessibility APIs</h1>
+      </header>
+
+      <main>
+        <section>
+          <p>
+            Web accessibility is crucial for ensuring all users, regardless of
+            their abilities, can access and interact with online content.
+            Accessibility APIs play a vital role in this, bridging the gap
+            between web applications and assistive technologies like screen
+            readers. In this blog post, we'll dive into what accessibility APIs
+            are, how they work, and highlight some best practices to make your
+            web applications more inclusive.
+          </p>
+        </section>
+
+        <section>
+          <h2>What are Accessibility APIs?</h2>
+          <p>
+            Accessibility APIs are specialized interfaces that allow web
+            applications to communicate with assistive technologies. These APIs
+            expose information about the structure and functionality of web
+            content, enabling tools such as screen readers to describe the
+            content to users with visual impairments. Accessibility APIs also
+            support other assistive technologies like voice recognition software
+            and switch devices for users with limited motor skills.
+          </p>
+        </section>
+
+        <section>
+          <h2>How Do Accessibility APIs Work?</h2>
+          <p>
+            Accessibility APIs work by mapping the elements of a web page to a
+            format that assistive technologies can interpret. Here's how it
+            operates:
+          </p>
+          <ol>
+            <li>
+              <strong>Semantic HTML and ARIA Roles:</strong> When developers use
+              semantic HTML tags (e.g., <code>&lt;nav&gt;</code>,
+              <code>&lt;main&gt;</code>), browsers automatically expose these
+              elements to accessibility APIs. ARIA (Accessible Rich Internet
+              Applications) roles can also be added to elements to provide
+              additional context.
+            </li>
+            <li>
+              <strong>DOM Accessibility Tree:</strong> The browser generates an
+              accessibility tree based on the DOM, which accessibility APIs
+              query to provide structured information to assistive technologies.
+            </li>
+            <li>
+              <strong>Interaction with Assistive Technologies:</strong> The API
+              then relays information like labels, states, and keyboard focus to
+              assistive technologies, which present it to users in a meaningful
+              way.
+            </li>
+          </ol>
+          <h3>Basic Example</h3>
+          <p>
+            Here's a simple example of how an ARIA role enhances accessibility:
+          </p>
+          <pre><code class="language-html">&lt;button aria-label="Submit form"&gt;Submit&lt;/button&gt;</code></pre>
+          <p>
+            In this example, the <code>aria-label</code> attribute provides a
+            description for users relying on screen readers, improving the
+            accessibility of the button.
+          </p>
+        </section>
+
+        <section>
+          <h2>Best Practices for Using Accessibility APIs</h2>
+          <h3>1. Use Semantic HTML</h3>
+          <p>
+            Start with proper HTML5 elements. Tags like
+            <code>&lt;header&gt;</code>, <code>&lt;article&gt;</code>, and
+            <code>&lt;footer&gt;</code> provide structural information that
+            browsers can expose through accessibility APIs.
+          </p>
+
+          <h3>2. Implement ARIA Roles Judiciously</h3>
+          <p>
+            While ARIA roles can fill in gaps where native HTML lacks semantic
+            meaning, avoid overusing them. Stick to native elements when
+            possible, and use ARIA only to enhance complex interfaces.
+          </p>
+
+          <h3>3. Ensure Keyboard Navigability</h3>
+          <p>
+            Web pages must be fully navigable with a keyboard. This includes
+            ensuring focus states are visible and that all interactive elements
+            (e.g., buttons, links) are keyboard accessible.
+          </p>
+
+          <h3>4. Provide Descriptive Labels</h3>
+          <p>
+            Use attributes like <code>aria-label</code> and
+            <code>aria-labelledby</code> to offer additional context to users of
+            screen readers. For example, ensure form fields and buttons are
+            appropriately labeled.
+          </p>
+
+          <h3>5. Test with Assistive Technologies</h3>
+          <p>
+            Regularly test your web pages with screen readers and other
+            assistive tools to ensure they function as expected. Popular tools
+            include NVDA, JAWS, and VoiceOver.
+          </p>
+        </section>
+
+        <section>
+          <h2>Fun Fact</h2>
+          <p>
+            Did you know that many modern web browsers come with built-in
+            accessibility inspection tools? These allow developers to view the
+            accessibility tree and debug potential issues in real time!
+          </p>
+        </section>
+
+        <section>
+          <h2>Conclusion</h2>
+          <p>
+            Accessibility APIs are a key component of making web content
+            inclusive for all users. By leveraging these APIs along with
+            semantic HTML and ARIA roles, you can create web applications that
+            are accessible, functional, and easy to navigate for users with
+            disabilities. As web developers, it's our responsibility to ensure
+            that everyone can access the web equally.
+          </p>
+          <p>
+            <strong>Ready to improve your site's accessibility?</strong> Explore
+            accessibility APIs and best practices to start building more
+            inclusive web experiences today!
+          </p>
+        </section>
+      </main>
+    </main>
+
+    <footer>
+      <p class="copyright">
+        <a href="../index.html">Home</a>
+      </p>
+    </footer>
+
+    <script src="../assets/js/script.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-javascript.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
