@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luke Sorrenti's Tech Blog - Powered by jQuery</title>
+
+    <!--
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/style.min.css" />
+    <link rel="stylesheet" href="../assets/css/blog.css" />
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-KyZXEAg3QhqLMpG8r+8fhAXLRbb4omklFEW0xyJrwIU="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="light-theme">
+    <!--
+    - #HEADER
+  -->
+
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="../index.html">
+            <img
+              src="../assets/images/logo-light.svg"
+              alt="Devblog's logo"
+              width="150"
+              height="40"
+              class="logo-light"
+            />
+            <img
+              src="../assets/images/logo-dark.svg"
+              alt="Devblog's logo"
+              width="150"
+              height="40"
+              class="logo-dark"
+            />
+          </a>
+
+          <div class="btn-group">
+            <button class="nav-menu-btn">
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+
+          <div class="flex-wrapper">
+            <ul class="desktop-nav">
+              <li>
+                <a href="../index.html" class="nav-link">Home</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mobile-nav">
+            <button class="nav-close-btn">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="wrapper">
+              <p class="h3 nav-title">Main Menu</p>
+
+              <ul>
+                <li class="nav-item">
+                  <a href="../index.html" class="nav-link">Home</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="h3 nav-title">Topics</p>
+
+              <ul>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Database</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Accessibility</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Web Performance</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <header>
+        <h1>
+          Unlocking the Power of jQuery: A Revolutionary Library in Web
+          Development
+        </h1>
+      </header>
+
+      <main>
+        <section>
+          <p>
+            jQuery is a fast, small, and feature-rich JavaScript library that
+            has been widely used for over a decade. It made web development
+            faster, more efficient, and more compatible across browsers. In this
+            blog post, we'll explore the history of jQuery, why it became so
+            popular, and how it simplifies development.
+          </p>
+        </section>
+
+        <section>
+          <h2>Why jQuery?</h2>
+          <p>
+            jQuery was first released in 2006 by John Resig. It provided an
+            elegant solution to JavaScript’s complexity, particularly in
+            handling different browser implementations. Before modern frameworks
+            like React and Vue became popular, jQuery was the go-to library for
+            DOM manipulation, AJAX requests, and event handling.
+          </p>
+        </section>
+
+        <section>
+          <h2>How Does jQuery Simplify Development?</h2>
+          <p>
+            jQuery makes interacting with HTML elements simpler. Instead of
+            writing verbose JavaScript code, you can accomplish more with less
+            code. Here's how jQuery simplifies common tasks:
+          </p>
+          <ol>
+            <li>
+              <strong>DOM Manipulation:</strong> Access and modify HTML elements
+              with ease.
+            </li>
+            <li>
+              <strong>AJAX:</strong> Send asynchronous requests to servers and
+              handle responses efficiently.
+            </li>
+            <li>
+              <strong>Event Handling:</strong> Attach event handlers to
+              elements, handling user input more smoothly.
+            </li>
+          </ol>
+
+          <h3>Basic Example: Button Click with jQuery</h3>
+          <p>
+            Here’s how you can handle a simple button click and update a div
+            using jQuery:
+          </p>
+          <pre><code class="language-javascript">
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#result").load("/content");
+    });
+});
+          </code></pre>
+          <p>
+            This code will fetch new content from the server and load it into
+            the element with ID `result` whenever the button is clicked.
+          </p>
+        </section>
+
+        <section>
+          <h2>Use Cases</h2>
+          <h3>1. Simplifying AJAX Calls</h3>
+          <p>
+            jQuery makes asynchronous calls to the server easier using its
+            built-in AJAX methods. With minimal code, developers can update page
+            content dynamically without full page reloads.
+          </p>
+
+          <h3>2. Enhancing Forms</h3>
+          <p>
+            jQuery can improve user interactions with forms, such as validating
+            inputs on the fly or making real-time updates to other fields based
+            on user input.
+          </p>
+
+          <h3>3. DOM Manipulation</h3>
+          <p>
+            Whether you're adding new elements, removing existing ones, or
+            modifying content, jQuery's DOM manipulation features make it quick
+            and easy.
+          </p>
+
+          <h3>4. Event Handling</h3>
+          <p>
+            With jQuery, you can effortlessly manage user events like clicks,
+            form submissions, mouseovers, and more with its simplified event
+            model.
+          </p>
+        </section>
+
+        <section>
+          <h2>Fun Fact</h2>
+          <p>
+            Did you know that jQuery once dominated the web development
+            landscape? According to W3Techs, in 2016, nearly 96.6% of all
+            websites using a JavaScript library were using jQuery.
+          </p>
+        </section>
+
+        <section>
+          <h2>Conclusion</h2>
+          <p>
+            jQuery’s simplicity and cross-browser compatibility made it the
+            go-to library for over a decade. While modern JavaScript frameworks
+            have reduced its dominance, jQuery’s ease of use, vast plugin
+            ecosystem, and powerful features make it relevant even today for
+            smaller projects or to enhance legacy applications.
+          </p>
+          <p>
+            <strong>Ready to try out jQuery?</strong> Download it today or use a
+            CDN and simplify your web development tasks!
+          </p>
+        </section>
+      </main>
+    </main>
+
+    <!--
+    - #FOOTER
+  -->
+
+    <footer>
+      <p class="copyright">
+        <a href="../index.html">Home</a>
+      </p>
+    </footer>
+  </body>
+</html>
