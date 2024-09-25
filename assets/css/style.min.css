@@ -409,10 +409,10 @@ footer .wrapper {
   padding: 1rem;
   border-top: 1px solid var(--action-primary);
 }
-.copyright a {
+/* .copyright a {
   color: var(--accent);
   font-weight: 500;
-}
+} */
 @media (min-width: 550px) {
   :root {
     --fs-base: 0.9rem;
