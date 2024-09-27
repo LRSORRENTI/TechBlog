@@ -12,7 +12,19 @@ main {
   max-width: 800px;
   margin: auto;
 }
+
 .main-img {
+  max-width: 96%; /* Ensures the image doesn't exceed the container's width */
+  height: auto; /* Keeps the aspect ratio intact */
+  width: 90vw; /* Makes the image responsive to viewport width */
+  max-height: 500px; /* Restricts the maximum height for uniformity */
+  margin: auto;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* .main-img {
   max-width: 300px;
   max-height: 300px;
   margin: auto;
@@ -39,7 +51,7 @@ main {
   margin-bottom: 40px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
+} */
 section {
   margin-bottom: 40px;
 }
