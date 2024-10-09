@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luke Sorrenti's Tech Blog</title>
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/style.min.css" />
+    <link rel="stylesheet" href="../assets/css/blog.css" />
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="light-theme">
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="../index.html">
+            <img
+              src="../assets/images/logo-light.svg"
+              alt="Devblog's logo"
+              width="150"
+              height="40"
+              class="logo-light"
+            />
+            <img
+              src="../assets/images/logo-dark.svg"
+              alt="Devblog's logo"
+              width="150"
+              height="40"
+              class="logo-dark"
+            />
+          </a>
+
+          <div class="btn-group">
+            <button class="nav-menu-btn">
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+
+          <div class="flex-wrapper">
+            <ul class="desktop-nav">
+              <li>
+                <a href="../index.html" class="nav-link">Home</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mobile-nav">
+            <button class="nav-close-btn">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="wrapper">
+              <p class="h3 nav-title">Main Menu</p>
+
+              <ul>
+                <li class="nav-item">
+                  <a href="../index.html" class="nav-link">Home</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="h3 nav-title">Topics</p>
+
+              <ul>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Database</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Accessibility</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Web Performance</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <img
+          class="main-img"
+          src="../assets/images/12_CSS_Color-Codes-Photoroom.png"
+          alt="Image depicting the UX audit process"
+        />
+      </div>
+
+      <header>
+        <h1 style="margin-bottom: 20px; padding-left: 0px">
+          A Comprehensive Guide to CSS Color Types: When and Why to Use Them
+        </h1>
+      </header>
+
+      <section>
+        <p>
+          When it comes to styling websites, colors play a crucial role in enhancing aesthetics and usability. In CSS, there are several ways to define colors, each with its strengths and ideal use cases. In this blog post, we'll explore the different CSS color types, when to use each, and which scenarios favor one over another.
+        </p>
+      </section>
+
+      <section>
+        <h2>1. Hexadecimal (Hex)</h2>
+        <p>
+          Hexadecimal color codes represent colors as a combination of red, green, and blue (RGB) values in hexadecimal format (base 16).
+        </p>
+        <pre><code>
+p {
+  color: #ff6347; /* Tomato red */
+  background-color: #1e90ff; /* Dodger blue */
+}
+        </code></pre>
+        <p><strong>Use Case:</strong> Ideal for concise color definitions for text and backgrounds. Common in web design due to simplicity.</p>
+      </section>
+
+      <section>
+        <h2>2. RGB (Red, Green, Blue)</h2>
+        <p>
+          RGB color values range from 0 to 255 and are widely used to define colors.
+        </p>
+        <pre><code>
+div {
+  background-color: rgb(255, 99, 71); /* Tomato red */
+}
+        </code></pre>
+        <p><strong>Use Case:</strong> Use RGB for dynamic color generation or when adjusting individual channels in JavaScript.</p>
+      </section>
+
+      <section>
+        <h2>3. RGBA (Red, Green, Blue, Alpha)</h2>
+        <p>
+          RGBA adds an alpha channel for transparency, making it suitable for overlays or layered designs.
+        </p>
+        <pre><code>
+button {
+  background-color: rgba(255, 99, 71, 0.5); /* 50% transparent tomato red */
+}
+        </code></pre>
+        <p><strong>Use Case:</strong> Use RGBA when you need transparency or semi-transparency.</p>
+      </section>
+
+      <section>
+        <h2>4. HSL (Hue, Saturation, Lightness)</h2>
+        <p>
+          HSL defines colors based on hue, saturation, and lightness. It’s more intuitive for creating and adjusting color schemes.
+        </p>
+        <pre><code>
+section {
+  color: hsl(9, 100%, 64%); /* Tomato red */
+  background-color: hsl(210, 90%, 56%); /* Dodger blue */
+}
+        </code></pre>
+        <p><strong>Use Case:</strong> Ideal for theming, adjusting color schemes, and creating consistent palettes.</p>
+      </section>
+
+      <section>
+        <h2>5. HSLA (Hue, Saturation, Lightness, Alpha)</h2>
+        <p>
+          HSLA adds transparency control to the HSL format, perfect for gradients or hover effects.
+        </p>
+        <pre><code>
+header {
+  background-color: hsla(210, 90%, 56%, 0.7); /* Semi-transparent blue */
+}
+        </code></pre>
+        <p><strong>Use Case:</strong> Great for transparent themes, background overlays, and layered elements.</p>
+      </section>
+
+      <section>
+        <h2>6. Color Names</h2>
+        <p>
+          CSS supports a set of predefined color names, such as "red", "blue", "tomato", etc.
+        </p>
+        <pre><code>
+nav {
+  background-color: dodgerblue;
+}
+        </code></pre>
+        <p><strong>Use Case:</strong> Use color names for quick prototypes or simple designs.</p>
+      </section>
+
+      <section>
+        <h2>Conclusion</h2>
+        <p>
+          Each CSS color type has its place in web design, and understanding when to use each is crucial for writing clean, maintainable styles. Use hex for static colors, HSL/HSLA for dynamic theming, and RGBA for transparency. For most text, hex values are typically best practice.
+        </p>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p class="copyright">
+        <a href="../index.html">Home</a>
+      </p>
+    </footer>
+
+    <!-- custom js link -->
+    <script src="../assets/js/script.min.js"></script>
+
+    <!-- ionicon link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-javascript.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
