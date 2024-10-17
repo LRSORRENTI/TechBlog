@@ -1057,17 +1057,15 @@ footer .wrapper {
     font-size: 22px;
   }
 
-  .social-link .discord {
-    color: hsl(235, 86%, 65%);
-  }
 
   .social-link .twitter {
-    color: hsl(203, 89%, 53%);
+    color: #667FEA;
   }
 
-  .social-link .facebook {
-    color: hsl(220, 46%, 48%);
+  .social-link .email:hover {
+    color:#FFF;
   }
+
 
   .social-link .icon-box:hover {
     background: var(--accent);
