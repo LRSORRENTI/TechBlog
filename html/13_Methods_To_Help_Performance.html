@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luke Sorrenti's Tech Blog</title>
+
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="../assets/css/blog.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="light-theme">
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="../index.html">
+            <img
+              src="../assets/images/logo-light.svg"
+              alt="Devblog's logo"
+              width="150"
+              height="40"
+              class="logo-light"
+            />
+            <img
+              src="../assets/images/logo-dark.svg"
+              alt="Devblog's logo"
+              width="150"
+              height="40"
+              class="logo-dark"
+            />
+          </a>
+
+          <div class="btn-group">
+            <button class="nav-menu-btn">
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+
+          <div class="flex-wrapper">
+            <ul class="desktop-nav">
+              <li>
+                <a href="../index.html" class="nav-link">Home</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mobile-nav">
+            <button class="nav-close-btn">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="wrapper">
+              <p class="h3 nav-title">Main Menu</p>
+
+              <ul>
+                <li class="nav-item">
+                  <a href="../index.html" class="nav-link">Home</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="h3 nav-title">Topics</p>
+
+              <ul>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Database</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Accessibility</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Web Performance</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <img class="main-img" src="../assets/images/13_Web_Perf.webp" alt="Image depicting web performance optimization" style=" height: auto; object-fit: cover;">
+      </div>
+      <header>
+        <h1>Top 10 Methods to Improve Web Performance</h1>
+      </header>
+      <main>
+        <section>
+          <p>
+            Optimizing web performance is crucial for enhancing user experience, improving SEO rankings, and boosting conversion rates. When your website loads faster, it keeps users engaged, reduces bounce rates, and leads to higher user satisfaction. Moreover, search engines like Google use page speed as a ranking factor, so improving performance can directly impact your search visibility. In this post, we'll explore the 10 most effective methods for improving your website's performance, covering everything from minimizing resources to optimizing load times, and why these steps matter for modern web development.
+          </p>
+        </section>
+      
+        <section>
+          <h2>1. Minify HTML, CSS, and JavaScript</h2>
+          <p>
+            Minification removes unnecessary characters, such as whitespaces, line breaks, and comments, from HTML, CSS, and JavaScript files. These characters are helpful for developers during the development process but are not needed for browser execution. By minifying these files, you reduce their overall size, which in turn reduces the amount of data that needs to be transferred over the network. For example, tools like <strong>UglifyJS</strong> or <strong>CSSNano</strong> can be used to automate the minification process, helping your site load faster, especially on slower connections.
+          </p>
+        </section>
+      
+        <section>
+          <h2>2. Enable GZIP/Brotli Compression</h2>
+          <p>
+            GZIP and Brotli are compression algorithms that can significantly reduce the size of files sent from the server to the user's browser. By compressing your site's assets (like HTML, CSS, and JavaScript), you minimize the amount of data that needs to be downloaded, which reduces load times. Most modern web servers (such as Apache and Nginx) support GZIP and Brotli out of the box, and configuring them is usually a matter of a few lines in your server configuration. It's important to ensure compression is enabled, especially for text-based assets, to ensure optimal performance.
+          </p>
+          <p>
+            <em>Tip:</em> Use tools like <strong>Google PageSpeed Insights</strong> to verify that compression is enabled on your site and to see potential areas for improvement.
+          </p>
+        </section>
+      
+        <section>
+          <h2>3. Lazy-load Offscreen Images</h2>
+          <p>
+            Lazy-loading images refers to a technique where images that are not immediately visible in the user's viewport are not loaded until they scroll into view. This prevents the browser from loading all images at once, reducing the initial page load time. By using the <code>loading="lazy"</code> attribute on <code>&lt;img&gt;</code> elements, you can implement this technique with minimal effort. Lazy-loading is especially useful for websites with long pages, where not all images are visible to the user immediately.
+          </p>
+          <p>
+            <em>Bonus:</em> This not only improves performance but also reduces bandwidth usage, making your site more data-friendly for mobile users.
+          </p>
+        </section>
+      
+        <section>
+          <h2>4. Use `async` or `defer` for Non-blocking JavaScript</h2>
+          <p>
+            When a browser encounters a <code>&lt;script&gt;</code> tag, it typically stops rendering the page until the script is fully downloaded and executed. This is known as render-blocking. By adding the <code>async</code> or <code>defer</code> attributes to your JavaScript tags, you allow the browser to continue rendering the page while the script is being loaded in the background. <code>async</code> executes the script as soon as it is downloaded, while <code>defer</code> waits until the HTML document is fully parsed, ensuring that your JavaScript does not delay the rendering of the page.
+          </p>
+          <p>
+            <em>Tip:</em> Use <code>async</code> for scripts that are independent of the DOM, such as analytics, and <code>defer</code> for scripts that interact with the DOM.
+          </p>
+        </section>
+      
+        <section>
+          <h2>5. Use a Content Delivery Network (CDN)</h2>
+          <p>
+            A CDN is a network of servers distributed geographically across various locations. When a user requests content from your site, the CDN delivers assets (such as images, CSS, and JavaScript) from the server closest to the user, reducing latency and load times. By leveraging a CDN, you can also reduce the load on your origin server and handle more concurrent users without performance degradation. Popular CDN providers like <strong>Cloudflare</strong> and <strong>Akamai</strong> offer scalable solutions for distributing static content efficiently.
+          </p>
+          <p>
+            <em>Tip:</em> Using a CDN not only improves performance but also provides added security features like DDoS protection.
+          </p>
+        </section>
+      
+        <section>
+          <h2>6. Remove Unused CSS</h2>
+          <p>
+            Modern websites often include large CSS files that contain styles for every possible scenario, even if many of those styles are not used on every page. By analyzing your CSS files and removing unused styles, you can reduce file sizes and make your pages load faster. Tools like <strong>PurgeCSS</strong> or <strong>UnCSS</strong> can help identify and remove unused CSS automatically, ensuring that only the necessary styles are included in your site's CSS files.
+          </p>
+          <p>
+            <em>Tip:</em> Be careful when removing styles from reusable components or frameworks, as removing too much CSS can break functionality.
+          </p>
+        </section>
+      
+        <section>
+          <h2>7. Inline Critical CSS (Above the Fold)</h2>
+          <p>
+            Critical CSS refers to the minimum CSS required to render the above-the-fold content (the portion of the webpage visible without scrolling). By inlining this CSS directly into the HTML document, you can reduce the time it takes to display visible content to the user. Once the above-the-fold content is rendered, the rest of the page can continue to load. This approach improves perceived performance, as users see content faster even if the entire page hasn't finished loading.
+          </p>
+          <p>
+            <em>Note:</em> Use tools like <strong>Critical</strong> to automate the process of extracting and inlining critical CSS.
+          </p>
+        </section>
+      
+        <section>
+          <h2>8. Use `preconnect` to Load Fonts Faster</h2>
+          <p>
+            Fonts are often hosted on third-party servers, which can introduce a delay when connecting to those servers. By using the <code>&lt;link rel="preconnect"&gt;</code> tag, you allow the browser to establish a connection to the font server early in the page load process, reducing the time it takes to load fonts. This is particularly useful for websites that rely heavily on custom fonts for branding and design.
+          </p>
+          <p>
+            <em>Tip:</em> Combine <code>preconnect</code> with <code>font-display: swap;</code> in your CSS to avoid invisible text while fonts are loading.
+          </p>
+        </section>
+      
+        <section>
+          <h2>9. Compress and Optimize Images</h2>
+          <p>
+            Images are often the heaviest assets on a webpage, and large images can significantly slow down load times. By compressing images using tools like <strong>Squoosh</strong> or <strong>ImageOptim</strong>, you can reduce their file size without sacrificing quality. Additionally, choose the appropriate image format (e.g., WebP or AVIF) to ensure that images are delivered in the smallest possible size.
+          </p>
+          <p>
+            <em>Best Practice:</em> Always specify the width and height attributes of images to prevent layout shifts, and consider using responsive image techniques to serve different image sizes for different devices.
+          </p>
+        </section>
+      
+        <section>
+          <h2>10. Use Service Workers for Caching</h2>
+          <p>
+            Service workers run in the background and act as a proxy between your website and the network. They can cache static resources (like CSS, JS, and images) so that when a user visits your site again, the browser can serve the cached assets instead of making new network requests. This not only improves load times for returning users but also enables offline functionality, allowing parts of your site to be accessible even without an internet connection.
+          </p>
+          <p>
+            <em>Tip:</em> Use service workers in conjunction with <strong>Progressive Web App (PWA)</strong> features to create more robust, fast-loading applications.
+          </p>
+        </section>
+      
+        <section>
+          <h2>Conclusion</h2>
+          <p>
+            By implementing these 10 web performance optimization methods, you can significantly improve your website's speed and user experience. Whether you're removing unused CSS, enabling lazy-loading for images, or leveraging service workers for caching, these techniques help ensure that your site loads quickly and efficiently on all devices. Taking the time to optimize your site will not only provide a better experience for users but also give you an edge in search rankings and overall web performance.
+          </p>
+          <p>
+            <strong>Ready to get started?</strong> Implement these tips today and see a noticeable improvement in your site's performance!
+          </p>
+        </section>
+      </main>
+      
+
+    <footer>
+      <p class="copyright">
+         <a href="../index.html">Home</a>
+      </p>
+    </footer>
+
+    <script src="../assets/js/script.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-javascript.min.js"></script> 
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
