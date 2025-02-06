@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luke Sorrenti's Tech Blog</title>
+
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="../assets/css/blog.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="light-theme">
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="../index.html">
+            <img
+              src="../assets/images/logo-light.svg"
+              alt="Devblog's logo"
+              width="150"
+              height="40"
+              class="logo-light"
+            />
+            <img
+              src="../assets/images/logo-dark.svg"
+              alt="Devblog's logo"
+              width="150"
+              height="40"
+              class="logo-dark"
+            />
+          </a>
+
+          <div class="btn-group">
+            <button class="nav-menu-btn">
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+
+          <div class="flex-wrapper">
+            <ul class="desktop-nav">
+              <li>
+                <a href="../index.html" class="nav-link">Home</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <img class="main-img" src="../assets/images/14_Framer.png" alt="Framer Motion animation preview" style=" height: auto; object-fit: cover;">
+      </div>
+      <header>
+        <h1>The Power of Framer Motion: Elevate Your Web Animations</h1>
+      </header>
+      <main>
+        <section>
+          <p>
+            Framer Motion is one of the most powerful and flexible animation libraries for React. Built by Framer, it was designed to bring smooth, performant, and declarative animations to web applications. Whether you're creating micro-interactions, page transitions, or complex UI animations, Framer Motion simplifies the process while delivering impressive results.
+          </p>
+        </section>
+      
+        <section>
+          <h2>The History of Framer Motion</h2>
+          <p>
+            Framer Motion is an evolution of Framer, a prototyping tool originally developed for designers. The Framer team recognized the growing need for a React-native animation library that was intuitive, performant, and easy to use, leading to the creation of Framer Motion. Since its release, it has become one of the go-to libraries for animating React applications.
+          </p>
+        </section>
+      
+        <section>
+          <h2>Why Use Framer Motion?</h2>
+          <p>
+            Traditional CSS animations and libraries like GSAP are powerful, but Framer Motion integrates seamlessly with React, offering features like:
+          </p>
+          <ul>
+            <li>Declarative animations using props.</li>
+            <li>Spring physics for natural movements.</li>
+            <li>Variants to easily manage animation states.</li>
+            <li>Gesture-based interactions like drag and hover.</li>
+            <li>Optimized performance with automatic layout animations.</li>
+          </ul>
+        </section>
+      
+        <section>
+          <h2>Use Cases for Framer Motion</h2>
+          <p>Framer Motion is incredibly versatile and can be used for:</p>
+          <ul>
+            <li><strong>Page Transitions:</strong> Smoothly transitioning between routes in React applications.</li>
+            <li><strong>Micro-Interactions:</strong> Adding hover effects, button animations, and input transitions.</li>
+            <li><strong>Drag and Drop:</strong> Implementing interactive UI components that respond to user input.</li>
+            <li><strong>Scroll-Based Animations:</strong> Triggering animations as the user scrolls.</li>
+          </ul>
+        </section>
+      
+        <section>
+          <h2>Best Ways to Use Framer Motion</h2>
+          <p>
+            Framer Motion works best in a React environment. To get started, install it with:
+          </p>
+          <pre><code>npm install framer-motion</code></pre>
+          <p>
+            Example of animating a simple div:
+          </p>
+          <pre><code>
+import { motion } from "framer-motion";
+
+const AnimatedBox = () => {
+  return (
+    <motion.div 
+      initial={{ opacity: 0 }} 
+      animate={{ opacity: 1 }} 
+      transition={{ duration: 1 }}
+    >
+      Hello, Framer Motion!
+    </motion.div>
+  );
+};
+          </code></pre>
+        </section>
+      
+        <section>
+          <h2>Conclusion</h2>
+          <p>
+            Framer Motion is an essential tool for modern web developers looking to add smooth and interactive animations to their React applications. Its easy-to-use API, performance optimizations, and wide range of features make it the go-to choice for enhancing user experience through animations. Whether you're building a portfolio, an e-commerce site, or a web application, Framer Motion can bring your UI to life.
+          </p>
+        </section>
+      </main>
+
+    <footer>
+      <p class="copyright">
+         <a href="../index.html">Home</a>
+      </p>
+    </footer>
+
+    <script src="../assets/js/script.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-javascript.min.js"></script> 
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
